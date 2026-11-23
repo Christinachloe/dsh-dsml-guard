@@ -1,0 +1,1 @@
+![A leaking assistant turn, repaired before it reaches the transcript](preview.svg)

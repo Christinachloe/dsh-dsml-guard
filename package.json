@@ -1,0 +1,69 @@
+{
+  "name": "@christinachloe/dsh-dsml-guard",
+  "version": "0.22.0",
+  "description": "Keeps broker-mangled tool-call fragments, leaked reasoning, and internal tag noise out of the DeepSeek Harness transcript.",
+  "type": "module",
+  "main": "index.js",
+  "exports": {
+    ".": "./index.js",
+    "./locale/*.json": "./locale/*.json",
+    "./icon": "./icon.svg",
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "index.js",
+    "cordis.patch.yml",
+    "locale/*.json",
+    "icon.svg",
+    "docs",
+    "test.mjs",
+    "verify_logging.mjs",
+    "fixtures",
+    "README.md",
+    "CHANGELOG.md",
+    "LICENSE"
+  ],
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    }
+  },
+  "scripts": {
+    "test": "node test.mjs",
+    "test:log": "node verify_logging.mjs",
+    "test:all": "node test.mjs && node verify_logging.mjs"
+  },
+  "engines": {
+    "node": "^22.19.0 || >=24.0.0"
+  },
+  "peerDependencies": {
+    "@deepseek-ai/cordis": "*"
+  },
+  "peerDependenciesMeta": {
+    "@deepseek-ai/cordis": {
+      "optional": true
+    }
+  },
+  "keywords": [
+    "deepseek-harness",
+    "dsh",
+    "dsh-plugin",
+    "dsml",
+    "tool-call",
+    "openai-completions",
+    "stream"
+  ],
+  "author": "YG and Little Code Sauce",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Christinachloe/dsh-dsml-guard.git"
+  },
+  "homepage": "https://github.com/Christinachloe/dsh-dsml-guard#readme",
+  "bugs": {
+    "url": "https://github.com/Christinachloe/dsh-dsml-guard/issues"
+  },
+  "publishConfig": {
+    "access": "public"
+  }
+}

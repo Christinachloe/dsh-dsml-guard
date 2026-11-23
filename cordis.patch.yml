@@ -1,0 +1,22 @@
+# dsh-dsml-guard bundle layer.
+#
+# One Host row, mounted on `llm/stream`. Every key the plugin reads is written
+# out explicitly here: an id-targeted patch replaces the whole `config`, so a
+# partial row would silently drop the rest.
+#
+#   enabled     true        watch the stream at all
+#   leakAction  retry       on a leak, fail the step so dsh-llm-retry re-runs it
+#                           (observe = log only, replace = swap in a notice,
+#                            rescue = parse the leaked call and emit it as a real
+#                                     tool call: no second request, no replayed effects,
+#                            rescue-dry = parse and log only, still retry after)
+#   logFile     (unset)     JSONL target; defaults to $DSH_HOME/logs/dsml-guard.log
+#
+# Turning the row off stops all stream rewriting: leaked fragments and
+# reasoning-typed-as-answer text reach the transcript again.
+- insert:
+    - id: dsml-guard
+      name: '@christinachloe/dsh-dsml-guard'
+      config:
+        enabled: true
+        leakAction: retry

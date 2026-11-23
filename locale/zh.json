@@ -1,0 +1,7 @@
+{
+  "meta": {
+    "title": "DSML 守卫",
+    "description": "盯住 assistant 正文流，修掉中转把一轮 DeepSeek 输出弄坏的三类形态：回答里残留的工具调用标签残片、被复制进正文的思考、以及 thinking / analysis / preamble 这类内部标签泄漏成可见文字。leakAction 设成 retry 时会主动让这一步失败，由 harness 在同一轮内原地重跑，已完成的工具结果保留不动；设成 rescue 时会直接把残片里那次调用解析回来交给 harness 执行，不重发请求、也不重跑已经做过的副作用；设成 rescue-dry 只解析并记日志、照旧重跑，用来先量成功率。日志写到 $DSH_HOME/logs/dsml-guard.log。关掉它，原始流会照原样进入会话。",
+    "detail": "docs/DETAIL.zh.md"
+  }
+}

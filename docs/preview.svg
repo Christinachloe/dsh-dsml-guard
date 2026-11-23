@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 300" width="640" height="300" role="img" aria-label="A leaking assistant turn is repaired before it reaches the transcript">
+  <rect width="640" height="300" fill="#111827"/>
+  <rect x="24" y="32" width="252" height="236" rx="14" fill="#1b2436" stroke="#2b3750"/>
+  <rect x="364" y="32" width="252" height="236" rx="14" fill="#1b2436" stroke="#2b3750"/>
+
+  <g stroke="#4a5771" stroke-width="7" stroke-linecap="round">
+    <path d="M52 78h120"/>
+    <path d="M52 100h176"/>
+    <path d="M52 122h150"/>
+    <path d="M52 144h168"/>
+  </g>
+  <g fill="#ef6b6b">
+    <rect x="52" y="176" width="34" height="9" rx="4"/>
+    <rect x="94" y="176" width="56" height="9" rx="4"/>
+    <rect x="158" y="176" width="26" height="9" rx="4"/>
+    <rect x="52" y="200" width="72" height="9" rx="4"/>
+  </g>
+  <g stroke="#ef6b6b" stroke-width="7" stroke-linecap="round">
+    <path d="M52 228h96"/>
+  </g>
+
+  <g stroke="#e5eaf5" stroke-width="7" stroke-linecap="round">
+    <path d="M396 78h132"/>
+  </g>
+  <rect x="386" y="66" width="14" height="14" rx="4" fill="#5b8def"/>
+  <g stroke="#8fa3c8" stroke-width="6" stroke-linecap="round">
+    <path d="M396 112h176"/>
+    <path d="M396 134h150"/>
+    <path d="M396 156h168"/>
+    <path d="M396 178h118"/>
+  </g>
+  <g stroke="#3ecf8e" stroke-width="7" stroke-linecap="round" fill="none">
+    <path d="M392 214l14 14 26-30"/>
+  </g>
+
+  <g stroke="#5b8def" stroke-width="8" stroke-linecap="round" fill="none">
+    <path d="M296 150h44"/>
+    <path d="M330 138l14 12-14 12"/>
+  </g>
+</svg>

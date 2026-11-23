@@ -1,0 +1,7 @@
+{
+  "meta": {
+    "title": "DSML guard",
+    "description": "Watches the assistant text stream and repairs the three ways a relay mangles a DeepSeek turn: tool-call fragments left in the answer, reasoning copied into it, and internal tags (thinking, analysis, preamble) leaking as visible prose. With leakAction retry it fails the step so the harness re-runs it in place, keeping the finished tool results; with leakAction rescue it parses the leaked call and hands it back to the harness as a real tool call, so no request is re-sent and no side effect is repeated; rescue-dry parses and logs only, then still retries, so a hit rate can be measured first. Logs to $DSH_HOME/logs/dsml-guard.log. Turn it off to let the raw stream through again.",
+    "detail": "docs/DETAIL.md"
+  }
+}
